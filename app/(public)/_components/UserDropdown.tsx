@@ -12,9 +12,7 @@ import {
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import Link from 'next/link';
-import { authClient } from '@/lib/auth-client';
-import { useRouter } from 'next/navigation';
-import { toast } from 'sonner';
+import { useSignOut } from '@/hooks/use-signout';
 
 interface iAppProps {
 	name: string;
@@ -23,29 +21,16 @@ interface iAppProps {
 }
 
 export function UserDropdown({ email, name, image }: iAppProps) {
-	const router = useRouter();
-
-	// Sign out function
-	async function signOut() {
-		await authClient.signOut({
-			fetchOptions: {
-				onSuccess: () => {
-					router.push('/');
-					toast.success('Successfully logged out!');
-				},
-				onError: () => {
-					toast.error('Failed to log out. Please try again.');
-				},
-			},
-		});
-	}
+	const signOut = useSignOut();
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
 				<Button variant='ghost' className='h-auto p-0 hover:bg-transparent'>
 					<Avatar>
 						<AvatarImage src={image} alt='Profile image' />
-						<AvatarFallback>{name[0]?.toUpperCase() || 'U'}</AvatarFallback>
+						<AvatarFallback>
+							{name && name.length > 0 ? name.charAt(0).toUpperCase() : email.charAt(0).toUpperCase()}
+						</AvatarFallback>
 					</Avatar>
 					<ChevronDownIcon size={16} className='opacity-60' aria-hidden='true' />
 				</Button>
