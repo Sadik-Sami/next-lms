@@ -45,7 +45,7 @@ export function UserDropdown({ email, name, image }: iAppProps) {
 				<Button variant='ghost' className='h-auto p-0 hover:bg-transparent'>
 					<Avatar>
 						<AvatarImage src={image} alt='Profile image' />
-						<AvatarFallback>{name[0].toUpperCase()}</AvatarFallback>
+						<AvatarFallback>{name[0]?.toUpperCase() || 'U'}</AvatarFallback>
 					</Avatar>
 					<ChevronDownIcon size={16} className='opacity-60' aria-hidden='true' />
 				</Button>
