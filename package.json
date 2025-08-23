@@ -38,6 +38,10 @@
 		"@t3-oss/env-nextjs": "^0.13.8",
 		"@tabler/icons-react": "^3.34.1",
 		"@tanstack/react-table": "^8.21.3",
+		"@tiptap/extension-text-align": "^3.3.0",
+		"@tiptap/pm": "^3.2.2",
+		"@tiptap/react": "^3.2.2",
+		"@tiptap/starter-kit": "^3.2.2",
 		"better-auth": "^1.3.7",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
@@ -50,24 +54,26 @@
 		"react-hook-form": "^7.62.0",
 		"recharts": "2.15.4",
 		"resend": "^6.0.1",
+		"slugify": "^1.6.6",
 		"sonner": "^2.0.7",
 		"tailwind-merge": "^3.3.1",
 		"vaul": "^1.1.2",
-		"zod": "^4.0.17"
+		"zod": "^4.1.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.28.3",
-		"@eslint/eslintrc": "^3",
-		"@tailwindcss/postcss": "^4",
-		"@types/node": "^20",
-		"@types/react": "^19",
-		"@types/react-dom": "^19",
-		"eslint": "^9",
+		"@eslint/eslintrc": "^3.3.1",
+		"@tailwindcss/postcss": "^4.1.12",
+		"@tailwindcss/typography": "^0.5.16",
+		"@types/node": "^20.19.11",
+		"@types/react": "^19.1.11",
+		"@types/react-dom": "^19.1.7",
+		"eslint": "^9.34.0",
 		"eslint-config-next": "15.5.0",
 		"prisma": "^6.14.0",
-		"tailwindcss": "^4",
+		"tailwindcss": "^4.1.12",
 		"tsx": "^4.20.4",
 		"tw-animate-css": "^1.3.7",
-		"typescript": "^5"
+		"typescript": "^5.9.2"
 	}
 }
