@@ -13,6 +13,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Button } from '@/components/ui/button';
 import slugify from 'slugify';
 import { RichTextEditor } from '@/components/rich-text-editor/Editor';
+import Uploader from '@/components/file-upload/Uploader';
 
 export default function CourseCreationPage() {
 	const form = useForm<CourseSchemaType>({
@@ -123,7 +124,8 @@ export default function CourseCreationPage() {
 									<FormItem className='w-full'>
 										<FormLabel>Thumbnail-Image</FormLabel>
 										<FormControl>
-											<Input placeholder='Thumbnail url' {...field} />
+											<Uploader />
+											{/* <Input placeholder='Thumbnail url' {...field} /> */}
 										</FormControl>
 										<FormMessage />
 									</FormItem>
